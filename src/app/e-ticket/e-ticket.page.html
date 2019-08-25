@@ -114,8 +114,8 @@
     <ion-row>
       <ion-col>
         <ion-list>
-          <ion-item>
-            <div (click)="goProducts()">
+          <ion-item *ngFor="let product of json">
+            <div (click)="goProducts(product)">
               <ion-grid>
                 <ion-row>
                   <ion-col col-6>

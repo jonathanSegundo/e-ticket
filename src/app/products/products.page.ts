@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-products',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.page.scss'],
 })
 export class ProductsPage implements OnInit {
-
-  constructor() { }
+  public json;
+  constructor(public navCtrl: NavController) {this.json =JSON.parse(localStorage.getItem("products")); }
 
   ngOnInit() {
   }
