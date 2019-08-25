@@ -8,6 +8,7 @@ import { NavController } from '@ionic/angular';
 })
 export class ETicketPage {
   public isMenu: boolean = false;
+  public isSownloadTicket = false;
   constructor(public navCtrl: NavController) { }
 
   menu(){
@@ -26,7 +27,13 @@ export class ETicketPage {
   }
 
   goProducts(){
-    this.navCtrl.navigateRoot('/products');
+      this.navCtrl.navigateRoot('/products');
+    
+    
+  }
+
+  downloadTicket(){
+    console.log("Ticket descargado");
   }
 
 }
